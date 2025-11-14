@@ -1,6 +1,11 @@
 from app.split_integer import split_integer
 
 
+def test_difference_between_max_and_min_should_be_at_most_one() -> None:
+    result = split_integer(35, 6)
+    assert max(result) - min(result) <= 1
+
+
 def test_sum_of_the_parts_should_be_equal_to_value() -> None:
     assert sum(split_integer(35, 5)) == 35
 
